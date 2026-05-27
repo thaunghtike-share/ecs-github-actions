@@ -35,7 +35,7 @@ jobs:
         id: stage
         run: |
           if [ "${{ github.event_name }}" = "release" ]; then
-            echo "target_stage=${{ github.event.release.tag_name }}" >> $GITHUB_OUTPUT
+            echo "target_stage=${{ github.event.release.name }}" >> $GITHUB_OUTPUT
           else
             echo "target_stage=${{ github.ref_name }}" >> $GITHUB_OUTPUT
           fi
